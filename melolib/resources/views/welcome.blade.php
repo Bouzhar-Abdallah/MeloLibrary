@@ -18,14 +18,14 @@
             @if($todo->isdone)
             <form action="{{ route('delete', $todo->id) }}" method="post">
               {{csrf_field()}}
-              <button class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-200 text-sm leading-5 font-medium rounded-full text-gray-700 bg-green hover:bg-red-20 transition-all">
+              <button class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-200 text-sm leading-5 font-medium rounded-full text-gray-700 hover:bg-red-500 hover:bg-red-20 transition-all">
                 delete
               </button>
             </form>
             @else
             <form action="{{ route('markComplete', $todo->id) }}" method="post">
               {{csrf_field()}}
-              <button class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
+              <button class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white transition-all hover:bg-green-500">
                 Mark as done
               </button>
             </form>
