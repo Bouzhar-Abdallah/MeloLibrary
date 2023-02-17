@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\todosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +14,12 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [todosController::class, 'index'] );
+
+Route::post('/saveItem', [todosController::class, 'saveItem'] )->name('saveItem');
+Route::post('/markComplete/{id}', [todosController::class, 'markComplete'] )->name('markComplete');
+Route::post('/delete/{id}', [todosController::class, 'delete'] )->name('delete');
 
 
 Route::get('/example',[UserController::class, 'show']);
+
