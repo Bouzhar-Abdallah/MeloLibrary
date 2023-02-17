@@ -1,7 +1,7 @@
 <link href="{{ asset('./style.css') }}" rel="stylesheet">
 <div class="w-1/3 mx-auto">
   <!--  -->
-
+ 
   @foreach ($listTodos as $todo)
   <div class="flow-root mt-6 mb-4">
     <ul role="list" class="-my-5 divide-y divide-gray-200">
