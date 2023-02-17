@@ -16,7 +16,8 @@ class UserController extends Controller
     public function show()
     {
         $users = DB::select('select * from user');
-        dd($users);
+        //dd($users);
+       dump($users);
         return view('example', ['users' => $users]);
 
     }
