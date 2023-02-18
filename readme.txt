@@ -12,3 +12,5 @@ npx tailwindcss init -p
 composer require laravel/breeze --dev
 
 php artisan breeze:install
+
+ npm install -D flowbite
