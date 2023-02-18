@@ -1,3 +1,0 @@
-composer require laravel/breeze --dev
-
-breeze:install  
