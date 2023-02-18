@@ -14,11 +14,12 @@ module.exports = {
             colors: {
                 transparent: 'transparent',
                 current: 'currentColor',
-                'cadet': '#2B2D42',
-                'cadeth': '#404363',
-                'cadethh': '#DADBE7',
-                'cadethhh': '#F3F3F7',
-                'P_navy': '#424874',
+                'm-yellow': '#F8E16C',
+                'm-black': '#08090A',
+                'm-gray': '#61777F',
+                'chi-red': '#EA2B1F',
+                'histle': '#D6C3C9',
+                
                 'powder': '#FDFFFC',
                 'mauve': '#361B2B',
                 'saffron': '#F8E16C',
