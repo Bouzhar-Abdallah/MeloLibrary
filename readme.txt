@@ -9,3 +9,6 @@ valet link // in project folder
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
+composer require laravel/breeze --dev
+
+php artisan breeze:install
