@@ -43,7 +43,7 @@ Route::group(['prefix' => 'admin','middleware'=>['auth',\App\Http\Middleware\Adm
 
 //route for user
 Route::group(['prefix' => 'user','middleware'=>['auth',\App\Http\Middleware\UserMiddleware::class]], function () {
-    Route::get('dashboard', [DashboardController::class, 'user'])->name('user.dashboard');
+    Route::get('/', [DashboardController::class, 'user'])->name('user');
 });
 
 require __DIR__.'/auth.php';

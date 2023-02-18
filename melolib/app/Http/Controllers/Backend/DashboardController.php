@@ -9,6 +9,7 @@ class DashboardController extends Controller
 {
     public function admin(){
         echo 'welcome to admin';
+        //dd($_SESSION['status']);
         //add admin view files
     }
     public function executive(){
