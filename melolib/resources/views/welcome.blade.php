@@ -18,7 +18,7 @@
 
 <body class="antialiased">
 @include('layouts.navigation')
-    <x-buttons.purple />
+    
 </body>
 
 </html>

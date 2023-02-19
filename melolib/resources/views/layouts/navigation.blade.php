@@ -22,7 +22,7 @@
                     @if (Route::has('login'))
                     @auth
                     <li>
-                        <a href="{{ url('/dashboard') }}" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-m-black md:dark:hover:text-m-gray dark:hover:bg-gray-700 dark:hover:text-m-gray md:dark:hover:bg-transparent">Dashboard</a>
+                        <a href="{{ url('/test') }}" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-m-black md:dark:hover:text-m-gray dark:hover:bg-gray-700 dark:hover:text-m-gray md:dark:hover:bg-transparent">test</a>
                     </li>
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-m-black dark:hover:text-m-gray dark:focus:text-m-black dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
