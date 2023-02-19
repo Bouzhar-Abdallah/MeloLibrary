@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('band_artists', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('band_id');
-            $table->bigInteger('artist_id');
+            $table->foreignId('band_id');
+            $table->foreignId('artist_id');
             $table->timestamps();
         });
     }

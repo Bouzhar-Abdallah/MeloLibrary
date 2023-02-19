@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('bands', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->bigInteger('cover_id');
+            $table->foreignId('cover_id');
             $table->date('date_creation');
             $table->string('country');
             $table->timestamps();
