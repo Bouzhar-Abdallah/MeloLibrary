@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('artists', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->integer('cover_id');
+            $table->date('date_of_birth');
+            $table->string('country');
             $table->timestamps();
         });
     }

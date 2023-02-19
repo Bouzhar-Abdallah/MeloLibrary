@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('songs', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('url');
+            $table->integer('cover_id');
+            $table->integer('duration');
+            $table->date('release_date');
+            $table->text('lyrics');
             $table->timestamps();
         });
     }
