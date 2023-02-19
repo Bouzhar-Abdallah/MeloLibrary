@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -29,7 +28,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended($this->redirectTo());
     }
 
     /**
@@ -44,5 +43,23 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+    /**
+     * Get the post-login redirect path for the given user.
+     */
+    protected function redirectTo(): string
+    {
+        $role = Auth::user()->userRole->role_id;
+
+        if ($role == 1) {
+            return route('admin.dashboard');
+        } elseif ($role == 2) {
+            return route('executive.dashboard');
+        } elseif ($role == 3) {
+            return route('user');
+        } else {
+            return RouteServiceProvider::HOME;
+        }
     }
 }
