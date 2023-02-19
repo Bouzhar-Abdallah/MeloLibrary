@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('url');
-            $table->integer('cover_id');
-            $table->integer('duration');
+            $table->bigInteger('cover_id');
+            $table->bigInteger('duration');
             $table->date('release_date');
             $table->text('lyrics');
             $table->timestamps();
