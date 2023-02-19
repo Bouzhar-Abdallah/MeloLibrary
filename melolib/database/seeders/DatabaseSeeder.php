@@ -15,13 +15,15 @@ class DatabaseSeeder extends Seeder
         /* 
         roles seed
         $this->call(RolesTableSeeder::class); 
-        */
-    {
-        /* 
+        
         genres seed
         $this->call(GenresTableSeeder::class);
+        
+        $this->call(BandsTableSeeder::class);
+        
         */
         
+        $this->call(BandsTableSeeder::class);
         
     }
 }
