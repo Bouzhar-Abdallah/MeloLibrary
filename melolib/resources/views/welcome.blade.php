@@ -17,7 +17,7 @@
 </head>
 
 <body class="antialiased">
-    <x-navbar />
+@include('layouts.navigation')
     <x-buttons.purple />
 </body>
 
