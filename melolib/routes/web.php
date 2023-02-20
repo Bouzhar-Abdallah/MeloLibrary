@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\DashboardController;
 
@@ -17,6 +18,9 @@ use App\Http\Controllers\Backend\DashboardController;
 */
 
 Route::get('/', function () {
+    $user = auth()->user();
+    //dd($user->userRole->role->name);
+    
     return view('welcome');
 });
 
@@ -42,6 +46,7 @@ Route::middleware('auth')->group(function () {
 
 Route::group(['prefix' => 'admin','middleware'=>['auth',\App\Http\Middleware\AdminMiddleware::class]], function () {
     Route::get('dashboard', [DashboardController::class, 'admin'])->name('admin.dashboard');
+    Route::get('/song/new', [SongController::class, 'index'])->name('admin.song');
 });
 
 //route for executive
