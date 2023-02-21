@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\FileUploadController;
 
 //use App\Http\Middleware\UserMiddleware;
 /*
@@ -57,5 +58,10 @@ Route::group(['prefix' => 'admin','middleware'=>['auth',\App\Http\Middleware\Adm
 Route::group(['prefix' => 'user','middleware'=>['auth',\App\Http\Middleware\UserMiddleware::class]], function () {
     Route::get('/', [DashboardController::class, 'user'])->name('user');
 });
+
+Route::get('/upload',[FileUploadController::class, 'showUploadForm']);
+Route::post('/upload',[FileUploadController::class, 'storeUploads']);
+
+
 
 require __DIR__.'/auth.php';
