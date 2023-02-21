@@ -19,17 +19,19 @@ class Select extends Component
         $this->label = $label;
         if ($name == 'artist') {
             
-            $artists = artist::all();
-            $bands = band::all();
-            $this->options = $artists->merge($bands);
+            $this->options = artist::all();
+            
         }elseif ($name == 'genre') {
             $this->options = genre::all();
+        }elseif ($name == 'band') {
+            $this->options = band::all();
+            
         }
     }
 
     public function render()
     {
-        
+        /*  {{ dd($options) }} */
         return view('components.select');
     }
 }

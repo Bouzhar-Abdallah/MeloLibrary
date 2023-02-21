@@ -78,6 +78,7 @@
             </div>
 
             <x-select name="artist" label="Artist" />
+            <x-select name="band" label="Band" />
             <x-select name="genre" label="Genre" />
 
             
