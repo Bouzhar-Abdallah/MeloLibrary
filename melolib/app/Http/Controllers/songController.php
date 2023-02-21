@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Providers\RouteServiceProvider;
-use App\Models\song;
+use App\Models\Song;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -12,7 +12,7 @@ class SongController extends Controller
     public function index(Request $request): View
     {
         //$songs = song::all();
-        $songs = song::with('artists', 'genres', 'bands')->get();
+        $songs = Song::with('artists', 'genres', 'bands')->get();
 
         /* 
         echo '<pre>';
@@ -28,7 +28,7 @@ class SongController extends Controller
     public function save(Request $request)
     {
 
-        $song = song::create([
+        $song = Song::create([
             "title" => $request->title,
             "url" => 'test',
             "cover_id" => 1,
