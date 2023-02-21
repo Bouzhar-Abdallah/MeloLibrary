@@ -1,4 +1,6 @@
+<pre>
 {{ $songs }}
+</pre>
 <x-app-layout>
   <div class="p-4 mx-auto">
     <form method="post" action=" {{ route('admin.song.save') }} " class="space-y-8 divide-y divide-gray-200">
