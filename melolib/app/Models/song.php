@@ -12,14 +12,14 @@ class song extends Model
 
     public function bands()
     {
-        return $this->belongsToMany(Band::class, 'song_bands');
+        return $this->belongsToMany(Band::class);
     }
     public function genres()
     {
-        return $this->belongsToMany(genre::class, 'song_genres');
+        return $this->belongsToMany(genre::class);
     }
     public function artists()
     {
-        return $this->belongsToMany(artist::class, 'song_artists');
+        return $this->belongsToMany(artist::class);
     }
 }
