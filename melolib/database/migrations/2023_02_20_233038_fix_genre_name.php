@@ -13,7 +13,7 @@ return new class extends Migration
     {
         /* problem to fix later */
         Schema::table('genres', function (Blueprint $table) {
-            $table->renameColumn("`genre_name`", "name");
+            $table->renameColumn("genre_name", "name");
         });
         
         

@@ -9,14 +9,15 @@ use Illuminate\View\View;
 class SongController extends Controller
 {
     public function index(Request $request): View
-    {   
+    {
         $songs = song::all();
-        return view('song.new',
-    ['songs' => $songs]
-    );
+        return view(
+            'song.new',
+            ['songs' => $songs]
+        );
     }
-    /* public function add(Request $request): View
-    {   
-        echo 'add';
-    } */
+    public function save(Request $request)
+    {
+        dd($request);
+    }
 }

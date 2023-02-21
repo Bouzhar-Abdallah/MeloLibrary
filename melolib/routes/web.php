@@ -47,6 +47,7 @@ Route::middleware('auth')->group(function () {
 Route::group(['prefix' => 'admin','middleware'=>['auth',\App\Http\Middleware\AdminMiddleware::class]], function () {
     Route::get('dashboard', [DashboardController::class, 'admin'])->name('admin.dashboard');
     Route::get('/song/new', [SongController::class, 'index'])->name('admin.song');
+    Route::post('/song/save', [SongController::class, 'save'])->name('admin.song.save');
 });
 
 //route for executive
