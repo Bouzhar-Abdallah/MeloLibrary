@@ -214,6 +214,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'Cloudinary' => App\Facades\CloudinaryFacade::class,
+        'Cloudinary\Uploader' => 'CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary',
     ])->toArray(),
 
 ];

@@ -7,6 +7,8 @@ use App\Models\Song;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Cloudinary;
+
+
 class SongController extends Controller
 {
     public function index(Request $request): View
@@ -31,9 +33,18 @@ class SongController extends Controller
         $uploadResult =  Cloudinary::UploadApi()->upload($file->getPathname());
         $imageUrl = $uploadResult['secure_url'];
 
+
+
+        $clip = $request->file('clip');
+        $uploadClipResult = Cloudinary::uploadApi()->upload($clip->getPathname(), [
+            "resource_type" => "auto",
+        ]);
+        $clipUrl = $uploadClipResult['secure_url'];
+        
+        die();
         $song = Song::create([
             "title" => $request->title,
-            "url" => 'test',
+            "url" => $clipUrl,
             "cover_url" => $imageUrl,
             "duration" => 300,
             "release_date" => $request->release_date,
@@ -48,7 +59,7 @@ class SongController extends Controller
 
         $selectedGenreIds = $request->input('genre', []);
         $song->genres()->attach($selectedGenreIds);
-        
+
 
 
         return redirect('/admin/song/new');

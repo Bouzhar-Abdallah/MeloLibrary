@@ -19,4 +19,11 @@ class CloudinaryServiceProvider extends ServiceProvider
             ]);
         });
     }
+    public function boot()
+    {
+        $this->app->singleton('cloudinary.uploader', function ($app) {
+            return new \Cloudinary\Uploader();
+        });
+    }
+    
 }
