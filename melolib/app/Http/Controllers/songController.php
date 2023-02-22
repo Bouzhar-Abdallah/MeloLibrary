@@ -34,7 +34,7 @@ class SongController extends Controller
         $song = Song::create([
             "title" => $request->title,
             "url" => 'test',
-            "cover_id" => $imageUrl,
+            "cover_url" => $imageUrl,
             "duration" => 300,
             "release_date" => $request->release_date,
             "lyrics" => $request->lyrics
