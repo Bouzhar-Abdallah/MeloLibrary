@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Kreait\Firebase\Storage;
 
 class FileUploadController extends Controller
 {
@@ -13,7 +14,9 @@ class FileUploadController extends Controller
 
     public function storeUploads(Request $request)
     {
-        $request->file('file')->store('images');
+        //$request->file('file')
+        
+        
 
         return back()
             ->with('success', 'File uploaded successfully');
