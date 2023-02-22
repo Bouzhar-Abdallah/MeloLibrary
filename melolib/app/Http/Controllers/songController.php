@@ -40,13 +40,14 @@ class SongController extends Controller
             "resource_type" => "auto",
         ]);
         $clipUrl = $uploadClipResult['secure_url'];
+        $audio = new \wapmorgan\Mp3Info\Mp3Info($clip, true);
         
-        die();
+
         $song = Song::create([
             "title" => $request->title,
             "url" => $clipUrl,
             "cover_url" => $imageUrl,
-            "duration" => 300,
+            "duration" => $audio->duration,
             "release_date" => $request->release_date,
             "lyrics" => $request->lyrics
         ]);
