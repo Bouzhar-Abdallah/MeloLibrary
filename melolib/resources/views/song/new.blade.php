@@ -3,7 +3,7 @@
 </pre> -->
 <x-app-layout>
   <div class="p-4 mx-auto">
-    <form method="post" action=" {{ route('admin.song.save') }} " class="space-y-8 divide-y divide-gray-200">
+    <form method="post" action=" {{ route('admin.song.save') }} " class="space-y-8 divide-y divide-gray-200" enctype="multipart/form-data">
     @csrf
       <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5 grid grid-cols-2 ">
         <div class="p-8">

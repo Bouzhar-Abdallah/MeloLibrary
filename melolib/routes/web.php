@@ -18,14 +18,14 @@ use App\Http\Controllers\FileUploadController;
 |
 */
 
-Route::get('/', function () {
-    $user = auth()->user();
+Route::get('/old', function () {
+    //$user = auth()->user();
     //dd($user->userRole->role->name);
     
     return view('welcome');
 });
 
-Route::get('/test', function () {
+Route::get('/', function () {
     return view('test');
 });
 

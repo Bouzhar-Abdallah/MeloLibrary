@@ -6,7 +6,7 @@ use App\Providers\RouteServiceProvider;
 use App\Models\Song;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-
+use Cloudinary;
 class SongController extends Controller
 {
     public function index(Request $request): View
@@ -27,11 +27,14 @@ class SongController extends Controller
     }
     public function save(Request $request)
     {
+        $file = $request->file('cover');
+        $uploadResult =  Cloudinary::UploadApi()->upload($file->getPathname());
+        $imageUrl = $uploadResult['secure_url'];
 
         $song = Song::create([
             "title" => $request->title,
             "url" => 'test',
-            "cover_id" => 1,
+            "cover_id" => $imageUrl,
             "duration" => 300,
             "release_date" => $request->release_date,
             "lyrics" => $request->lyrics

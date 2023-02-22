@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Cloudinary;
-use Cloudinary\Cloudinary as CloudinaryCloudinary;
+
 
 class FileUploadController extends Controller
 {
