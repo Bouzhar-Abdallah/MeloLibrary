@@ -182,6 +182,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         //CloudinaryLabs\CloudinaryLaravel\CloudinaryServiceProvider::class,
+        App\Providers\CloudinaryServiceProvider::class,
+
+
 
         /*
          * Package Service Providers...
@@ -210,7 +213,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Cloudinary' => App\Facades\CloudinaryFacade::class,
     ])->toArray(),
 
 ];
