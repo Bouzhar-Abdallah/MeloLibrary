@@ -23,4 +23,12 @@ class song extends Model
     {
         return $this->belongsToMany(artist::class);
     }
+    public function languages()
+    {
+        return $this->belongsToMany(Language::class);
+    }
+    public function writers()
+    {
+        return $this->belongsToMany(Writer::class);
+    }
 }
