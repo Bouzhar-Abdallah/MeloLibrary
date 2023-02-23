@@ -103,6 +103,8 @@
             <x-select name="artist" label="Artist" />
             <x-select name="band" label="Band" />
             <x-select name="genre" label="Genre" />
+            <x-select name="writer" label="writer" />
+            <x-select name="language" label="language" />
 
             
 
