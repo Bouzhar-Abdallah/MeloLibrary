@@ -1,317 +1,244 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
-@vite('resources/css/app.css')
-<div class="relative bg-white">
-  <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
-    <div>
-      <a href="#" class="flex">
-        <span class="sr-only">Workflow</span>
-        <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
-      </a>
-    </div>
-    <div class="-mr-2 -my-2 md:hidden">
-      <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-        <span class="sr-only">Open menu</span>
-        <!-- Heroicon name: outline/menu -->
-        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-    <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
-      <nav class="flex space-x-10">
-        <div class="relative">
-          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false">
-            <span>Solutions</span>
-            <!--
-              Heroicon name: solid/chevron-down
-
-              Item active: "text-gray-600", Item inactive: "text-gray-400"
-            -->
-            <svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </button>
-
-          <!--
-            'Solutions' flyout menu, show/hide based on flyout menu state.
-
-            Entering: "transition ease-out duration-200"
-              From: "opacity-0 translate-y-1"
-              To: "opacity-100 translate-y-0"
-            Leaving: "transition ease-in duration-150"
-              From: "opacity-100 translate-y-0"
-              To: "opacity-0 translate-y-1"
-          -->
-          <div class="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl">
-            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                  <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                    <!-- Heroicon name: outline/chart-bar -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Analytics</p>
-                    <p class="mt-1 text-sm text-gray-500">Get a better understanding of where your traffic is coming from.</p>
-                  </div>
-                </a>
-
-                <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                  <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                    <!-- Heroicon name: outline/cursor-click -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Engagement</p>
-                    <p class="mt-1 text-sm text-gray-500">Speak directly to your customers in a more meaningful way.</p>
-                  </div>
-                </a>
-
-                <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                  <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                    <!-- Heroicon name: outline/shield-check -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Security</p>
-                    <p class="mt-1 text-sm text-gray-500">Your customers&#039; data will be safe and secure.</p>
-                  </div>
-                </a>
-
-                <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                  <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                    <!-- Heroicon name: outline/view-grid -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Integrations</p>
-                    <p class="mt-1 text-sm text-gray-500">Connect with third-party tools that you&#039;re already using.</p>
-                  </div>
-                </a>
-
-                <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                  <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                    <!-- Heroicon name: outline/refresh -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Automations</p>
-                    <p class="mt-1 text-sm text-gray-500">Build strategic funnels that will drive your customers to convert</p>
-                  </div>
-                </a>
-
-                <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                  <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                    <!-- Heroicon name: outline/document-report -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </div>
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Reports</p>
-                    <p class="mt-1 text-sm text-gray-500">Get detailed reports that will help you make more informed decisions</p>
-                  </div>
-                </a>
-              </div>
-              <div class="p-5 bg-gray-50 sm:p-8">
-                <a href="#" class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
-                  <div class="flex items-center">
-                    <div class="text-base font-medium text-gray-900">Enterprise</div>
-                    <span class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800"> New </span>
-                  </div>
-                  <p class="mt-1 text-sm text-gray-500">Empower your entire team with even more advanced tools.</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
-        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Docs </a>
-
-        <div class="relative">
-          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false">
-            <span>More</span>
-            <!--
-              Heroicon name: solid/chevron-down
-
-              Item active: "text-gray-600", Item inactive: "text-gray-400"
-            -->
-            <svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </button>
-
-          <!--
-            'More' flyout menu, show/hide based on flyout menu state.
-
-            Entering: "transition ease-out duration-200"
-              From: "opacity-0 translate-y-1"
-              To: "opacity-100 translate-y-0"
-            Leaving: "transition ease-in duration-150"
-              From: "opacity-100 translate-y-0"
-              To: "opacity-0 translate-y-1"
-          -->
-          <div class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0">
-            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                <a href="#" class="-m-3 p-3 block rounded-md hover:bg-gray-50">
-                  <p class="text-base font-medium text-gray-900">Help Center</p>
-                  <p class="mt-1 text-sm text-gray-500">Get all of your questions answered in our forums or contact support.</p>
-                </a>
-
-                <a href="#" class="-m-3 p-3 block rounded-md hover:bg-gray-50">
-                  <p class="text-base font-medium text-gray-900">Guides</p>
-                  <p class="mt-1 text-sm text-gray-500">Learn how to maximize our platform to get the most out of it.</p>
-                </a>
-
-                <a href="#" class="-m-3 p-3 block rounded-md hover:bg-gray-50">
-                  <p class="text-base font-medium text-gray-900">Events</p>
-                  <p class="mt-1 text-sm text-gray-500">See what meet-ups and other events we might be planning near you.</p>
-                </a>
-
-                <a href="#" class="-m-3 p-3 block rounded-md hover:bg-gray-50">
-                  <p class="text-base font-medium text-gray-900">Security</p>
-                  <p class="mt-1 text-sm text-gray-500">Understand how we take your privacy seriously.</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div class="flex items-center md:ml-12">
-        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
-        <a href="#" class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Sign up </a>
-      </div>
-    </div>
+<!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<div class="relative bg-gray-800 overflow-hidden">
+  <div class="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
+    <svg class="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0" width="364" height="384" viewBox="0 0 364 384" fill="none">
+      <defs>
+        <pattern id="eab71dd9-9d7a-47bd-8044-256344ee00d0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="4" height="4" fill="currentColor" />
+        </pattern>
+      </defs>
+      <rect width="364" height="384" fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)" />
+    </svg>
   </div>
-
-  <!--
-    Mobile menu, show/hide based on mobile menu state.
-
-    Entering: "duration-200 ease-out"
-      From: "opacity-0 scale-95"
-      To: "opacity-100 scale-100"
-    Leaving: "duration-100 ease-in"
-      From: "opacity-100 scale-100"
-      To: "opacity-0 scale-95"
-  -->
-  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-      <div class="pt-5 pb-6 px-5">
-        <div class="flex items-center justify-between">
-          <div>
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+  <div class="relative pt-6 pb-16 sm:pb-24">
+    <div>
+      <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+        <div class="flex items-center flex-1">
+          <div class="flex items-center justify-between w-full md:w-auto">
+            <a href="#">
+              <span class="sr-only">Workflow</span>
+              <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="">
+            </a>
+            <div class="-mr-2 flex items-center md:hidden">
+              <button type="button" class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <!-- Heroicon name: outline/menu -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
-          <div class="-mr-2">
-            <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-              <span class="sr-only">Close menu</span>
-              <!-- Heroicon name: outline/x -->
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+          <div class="hidden space-x-10 md:flex md:ml-10">
+            <a href="#" class="font-medium text-white hover:text-gray-300">Product</a>
+
+            <a href="#" class="font-medium text-white hover:text-gray-300">Features</a>
+
+            <a href="#" class="font-medium text-white hover:text-gray-300">Marketplace</a>
+
+            <a href="#" class="font-medium text-white hover:text-gray-300">Company</a>
           </div>
         </div>
-        <div class="mt-6">
-          <nav class="grid gap-6">
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/chart-bar -->
+        <!-- <div class="hidden md:flex">
+          <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"> Log in </a>
+        </div> -->
+        <x-login_button/>
+      </nav>
+
+      <!--
+        Mobile menu, show/hide based on menu open state.
+
+        Entering: "duration-150 ease-out"
+          From: "opacity-0 scale-95"
+          To: "opacity-100 scale-100"
+        Leaving: "duration-100 ease-in"
+          From: "opacity-100 scale-100"
+          To: "opacity-0 scale-95"
+      -->
+      <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+          <div class="px-5 pt-4 flex items-center justify-between">
+            <div>
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+            </div>
+            <div class="-mr-2">
+              <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <span class="sr-only">Close menu</span>
+                <!-- Heroicon name: outline/x -->
                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Analytics</div>
-            </a>
+              </button>
+            </div>
+          </div>
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
 
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/cursor-click -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Engagement</div>
-            </a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
 
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/shield-check -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Security</div>
-            </a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
 
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/view-grid -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Integrations</div>
-            </a>
-
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/refresh -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Automations</div>
-            </a>
-
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/document-report -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Reports</div>
-            </a>
-          </nav>
-        </div>
-      </div>
-      <div class="py-6 px-5">
-        <div class="grid grid-cols-2 gap-4">
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Pricing </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Docs </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Enterprise </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Help Center </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Guides </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Events </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Security </a>
-        </div>
-        <div class="mt-6">
-          <a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Sign up </a>
-          <p class="mt-6 text-center text-base font-medium text-gray-500">
-            Existing customer?
-            <a href="#" class="text-indigo-600 hover:text-indigo-500"> Sign in </a>
-          </p>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+          </div>
+          <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"> Log in </a>
         </div>
       </div>
     </div>
+
+    <main class="mt-16 sm:mt-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+          <div class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+            <div>
+              <a href="#" class="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+                <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">We're hiring</span>
+                <span class="ml-4 text-sm">Visit our careers page</span>
+                <!-- Heroicon name: solid/chevron-right -->
+                <svg class="ml-2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+              </a>
+              <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
+                <span class="md:block">Data to enrich your</span>
+                <span class="text-indigo-400 md:block">online business</span>
+              </h1>
+              <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
+              <p class="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">Used by</p>
+              <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
+                <div class="flex flex-wrap items-start justify-between">
+                  <div class="flex justify-center px-1">
+                    <img class="h-9 sm:h-10" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
+                  </div>
+                  <div class="flex justify-center px-1">
+                    <img class="h-9 sm:h-10" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation">
+                  </div>
+                  <div class="flex justify-center px-1">
+                    <img class="h-9 sm:h-10" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
+            <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+              <div class="px-4 py-8 sm:px-10">
+                <div>
+                  <p class="text-sm font-medium text-gray-700">Sign in with</p>
+
+                  <div class="mt-1 grid grid-cols-3 gap-3">
+                    <div>
+                      <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Sign in with Facebook</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div>
+                      <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Sign in with Twitter</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div>
+                      <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Sign in with GitHub</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-6 relative">
+                  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                    <div class="w-full border-t border-gray-300"></div>
+                  </div>
+                  <div class="relative flex justify-center text-sm">
+                    <span class="px-2 bg-white text-gray-500"> Or </span>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                <form method="POST" action="{{ route('register') }}">
+        @csrf
+
+        <!-- Name -->
+        <div>
+            <x-input-label for="name" :value="__('Name')" />
+            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        </div>
+
+        <!-- Email Address -->
+        <div class="mt-4">
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+
+        <!-- Password -->
+        <div class="mt-4">
+            <x-input-label for="password" :value="__('Password')" />
+
+            <x-text-input id="password" class="block mt-1 w-full"
+                            type="password"
+                            name="password"
+                            required autocomplete="new-password" />
+
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mt-4">
+            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+
+            <x-text-input id="password_confirmation" class="block mt-1 w-full"
+                            type="password"
+                            name="password_confirmation" required autocomplete="new-password" />
+
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+        <div class="flex items-center justify-end mt-4">
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
+
+            <x-primary-button class="ml-4">
+                {{ __('Register') }}
+            </x-primary-button>
+        </div>
+    </form>
+                </div>
+              </div>
+              <div class="px-4 py-6 bg-gray-50 border-t-2 border-gray-200 sm:px-10">
+                <p class="text-xs leading-5 text-gray-500">By signing up, you agree to our <a href="#" class="font-medium text-gray-900 hover:underline">Terms</a>, <a href="#" class="font-medium text-gray-900 hover:underline">Data Policy</a> and <a href="#" class="font-medium text-gray-900 hover:underline">Cookies Policy</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 </div>
