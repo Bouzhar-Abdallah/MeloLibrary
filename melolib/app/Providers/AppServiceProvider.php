@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
         
         //dd(Auth::user());
         //to share data with all views
-        View::share('key', 'bouzhar');
+        View::share('siteName', 'MeloLib');
         
     }
 }

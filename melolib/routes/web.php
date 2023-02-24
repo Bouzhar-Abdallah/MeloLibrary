@@ -26,7 +26,7 @@ Route::get('/old', function () {
 });
 
 Route::get('/', function () {
-    return view('test');
+    return view('stests');
 });
 
 Route::get('/dashboard', function () {
