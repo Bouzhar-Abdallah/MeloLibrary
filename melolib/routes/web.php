@@ -18,26 +18,19 @@ use App\Http\Controllers\FileUploadController;
 |
 */
 
-Route::get('/old', function () {
-    //$user = auth()->user();
-    //dd($user->userRole->role->name);
-    
-    return view('welcome');
-});
+
 
 Route::get('/', function () {
-    return view('stests');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-/* Route::get('/test', function () {
-    return view('test');
-});
+Route::get('/test', [SongController::class, 'test']);
 
-*/
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

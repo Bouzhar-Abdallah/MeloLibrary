@@ -11,6 +11,10 @@ use Cloudinary;
 
 class SongController extends Controller
 {
+    public function test()
+    {
+        return back()->with('info','Item created successfully!');
+    }
     public function index(Request $request): View
     {
         //$songs = song::all();

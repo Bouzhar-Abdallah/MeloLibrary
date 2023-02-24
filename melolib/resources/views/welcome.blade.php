@@ -12,6 +12,9 @@
 
 <body class="antialiased">
 <x-navigation />
+@include('flash-message')
+
+<x-pro/>
     
 </body>
 
