@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class DashboardController extends Controller
 {
@@ -17,7 +18,7 @@ class DashboardController extends Controller
         //add executive view files
     }
     public function user(){
-        echo 'welcome to user';
+        return view('user.index');
         //add user view files
     }
 }

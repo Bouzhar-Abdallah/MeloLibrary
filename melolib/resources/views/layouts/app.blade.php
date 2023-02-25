@@ -14,9 +14,9 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased h-full overflow-hidden">
+    <body class="font-sans antialiased h-full">
         <div class="min-h-screen bg-gray-100">
-            <!-- <x-navigation /> -->
+            <x-navigation />
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-red-600 shadow">

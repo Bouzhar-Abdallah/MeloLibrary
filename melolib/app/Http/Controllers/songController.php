@@ -17,6 +17,7 @@ class SongController extends Controller
     }
     public function index(Request $request): View
     {
+        
         //$songs = song::all();
         $songs = Song::with('artists', 'genres', 'bands')->get();
 
@@ -26,6 +27,7 @@ class SongController extends Controller
         echo '</pre>'; 
         die();
         */
+        
         return view(
             'song.new',
             ['songs' => $songs]

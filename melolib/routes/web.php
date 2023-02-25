@@ -23,6 +23,7 @@ use App\Http\Controllers\FileUploadController;
 Route::get('/', function () {
     return view('welcome');
 });
+    
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -30,30 +31,32 @@ Route::get('/dashboard', function () {
 
 Route::get('/test', [SongController::class, 'test']);
 
+Route::get('/admin/dashboard', [DashboardController::class, 'admin'])->name('admin.dashboard');
+Route::get('/admin/song/new', [SongController::class, 'index'])->name('admin.song');
+Route::post('/admin/song/save', [SongController::class, 'save'])->name('admin.song.save');
+Route::get('/user', [DashboardController::class, 'user'])->name('user');
 
-Route::middleware('auth')->group(function () {
+/* Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+}); */
 
 
-Route::group(['prefix' => 'admin','middleware'=>['auth',\App\Http\Middleware\AdminMiddleware::class]], function () {
+/* Route::group(['prefix' => 'admin','middleware'=>['auth',\App\Http\Middleware\AdminMiddleware::class]], function () {
     Route::get('dashboard', [DashboardController::class, 'admin'])->name('admin.dashboard');
     Route::get('/song/new', [SongController::class, 'index'])->name('admin.song');
     Route::post('/song/save', [SongController::class, 'save'])->name('admin.song.save');
-});
+}); */
 
 //route for executive
 
 
 //route for user
-Route::group(['prefix' => 'user','middleware'=>['auth',\App\Http\Middleware\UserMiddleware::class]], function () {
+/* Route::group(['prefix' => 'user','middleware'=>['auth',\App\Http\Middleware\UserMiddleware::class]], function () {
     Route::get('/', [DashboardController::class, 'user'])->name('user');
-});
+}); */
 
-Route::get('/upload',[FileUploadController::class, 'showUploadForm']);
-Route::post('/upload',[FileUploadController::class, 'storeUploads']);
 
 
 
