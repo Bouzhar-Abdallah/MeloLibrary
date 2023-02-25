@@ -94,13 +94,15 @@
             <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
 
             <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+          </
+           <div class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"> 
+           <x-login_button/>  
           </div>
-          <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"> Log in </a>
         </div>
       </div>
     </div>
 
-    <main class="mt-16 sm:mt-24">
+    <main class="mt-4 sm:mt-24">
       <div class="mx-auto max-w-7xl">
         <div class="lg:grid lg:grid-cols-12 lg:gap-8">
           <div class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
