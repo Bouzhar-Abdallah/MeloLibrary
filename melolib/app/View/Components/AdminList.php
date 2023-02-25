@@ -16,6 +16,7 @@ class AdminList extends Component
      */
     public $options;
     public $name;
+    public $count;
     public function __construct($name)
     {
         
@@ -23,14 +24,16 @@ class AdminList extends Component
         switch ($name) {
             case 'artist':
                 $this->options = artist::withCount('songs')->get();
-                
+                $this->count = artist::count();
 
                 break;
             case 'genre':
                 $this->options = genre::withCount('songs')->get();
+                $this->count = genre::count();
                 break;
             case 'band':
                 $this->options = band::withCount('songs')->get();
+                $this->count = band::count();
                 break;
             case 'language':
                 $this->options = Language::all();
