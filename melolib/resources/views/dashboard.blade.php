@@ -148,13 +148,16 @@
   <main>
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <!-- stats -->
-      @livewire('search')
+      
+      
       <x-stats />
       <!-- lists -->
       <dl class="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-3 md:divide-y-0 md:divide-x">
-      <x-lists.adminList name="artist" />
-      <x-lists.adminList name="band" />
-      <x-lists.adminList name="genre" />
+        
+        <livewire:search name="artist" /> 
+        <livewire:search name="band" /> 
+        <livewire:search name="genre" /> 
+      
       
       
       </dl>
