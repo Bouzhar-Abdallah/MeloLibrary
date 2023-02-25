@@ -151,9 +151,9 @@
       <x-stats />
       <!-- lists -->
       <dl class="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-3 md:divide-y-0 md:divide-x">
-      <x-adminList name="artist" />
-      <x-adminList name="band" />
-      <x-adminList name="genre" />
+      <x-lists.adminList name="artist" />
+      <x-lists.adminList name="band" />
+      <x-lists.adminList name="genre" />
       
       
       </dl>

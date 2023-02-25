@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\lists;
 
 use App\Models\artist;
 use App\Models\band;
@@ -54,6 +54,6 @@ class AdminList extends Component
     public function render()
     {
         
-        return view('components.adminList');
+        return view('components.lists.adminList');
     }
 }
