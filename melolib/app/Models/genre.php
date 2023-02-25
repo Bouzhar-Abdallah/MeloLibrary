@@ -10,6 +10,6 @@ class genre extends Model
     use HasFactory;
     public function songs()
     {
-        return $this->belongsToMany(genre::class);
+        return $this->belongsToMany(song::class);
     }
 }
