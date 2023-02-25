@@ -2,9 +2,12 @@
 <div>
   <div class="flow-root mt-3">
   <div class="w-full flex justify-center items-center mb-3">
-    <h1 class="">artist</h1>
+    <h1 class="">bands</h1>
   </div>  
-    <ul role="list" class="-my-5 divide-y divide-gray-200">
+  <div class="mb-6 mt-2 mx-5">
+            <a href="#" class="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> View all </a>
+        </div>
+    <ul role="list" class="-my-5 divide-y divide-gray-200 py-2">
       <li class="py-4 px-3">
         <div class="flex items-center space-x-4">
           <div class="flex-shrink-0">
@@ -122,7 +125,5 @@
       </li>
     </ul>
   </div>
-  <div class="mt-6">
-    <a href="#" class="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> View all </a>
-  </div>
+ 
 </div>

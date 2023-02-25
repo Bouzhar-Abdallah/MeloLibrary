@@ -147,10 +147,18 @@
   </header>
   <main>
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <!-- Replace with your content -->
-      <div class="px-4 py-4 sm:px-0">
-        <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
-      </div>
+      <!-- stats -->
+      <x-stats />
+      <!-- lists -->
+      <dl class="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-3 md:divide-y-0 md:divide-x">
+      <x-admin_artists />
+      <x-admin_bands />
+      <x-admin_categories />
+      
+      </dl>
+      <div>
+  
+</div>
       <!-- /End replace -->
     </div>
   </main>
