@@ -183,6 +183,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         //CloudinaryLabs\CloudinaryLaravel\CloudinaryServiceProvider::class,
         App\Providers\CloudinaryServiceProvider::class,
+        Livewire\LivewireServiceProvider::class,
 
 
 
