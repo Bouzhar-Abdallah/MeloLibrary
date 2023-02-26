@@ -3,7 +3,7 @@
   <div class="flow-root mt-3">
     <div class="w-full flex justify-center items-center mb-3">
 
-      <h1 class="">{{$count}} - {{$name}}s </h1>
+      <h1 class="">{{$name}}s  <span class="text-gray-500 font-normal">({{$count}})</span> </h1>
     </div>
     <div class="mb-6 mt-2 mx-5">
       <a href="#" class="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Add new </a>

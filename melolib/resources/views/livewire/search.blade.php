@@ -3,7 +3,7 @@
     <div class="flow-root">
         <div class="w-full flex justify-between items-center px-3 py-3 bg-gray-100">
 
-            <h1 class=" capitalize font-bold">{{$count}} - {{$name}}s </h1>
+            <h1 class=" capitalize font-bold">{{$name}}s <span class="text-gray-500 font-normal text-sm">({{$count}})</h1>
 
             <span class="relative z-0 ml-2 inline-flex shadow-sm rounded-md ">
                 <div class="">
@@ -31,7 +31,7 @@
             <li class="py-4 px-3">
                 <div class="flex items-center space-x-4">
                     <div class="flex-shrink-0">
-                        <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                        <img class="h-8 w-8 rounded-full" src="{{$option->cover_url}}" alt="n">
                     </div>
                     <div class="flex-1 min-w-0">
                         <p class="text-sm font-medium text-gray-900 truncate">{{$option->name}}</p>
