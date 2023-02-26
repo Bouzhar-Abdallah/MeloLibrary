@@ -14,7 +14,7 @@ class Search extends Component
     public $search = '';
     public $options;
     public $count;
-    public function __construct($name)
+    public function mount($name)
     {
         $this->name = $name;
         
