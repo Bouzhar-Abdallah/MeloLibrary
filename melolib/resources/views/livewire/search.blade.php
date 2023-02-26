@@ -11,7 +11,7 @@
                     <!-- <x-text-input wire:model="search" type="text" placeholder="Search {{$name}}s..." class="block w-auto" type="text" autocomplete="name" /> -->
                     <input class="relative inline-flex items-center  rounded-l-md border border-gray-300 bg-white text-sm hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" wire:model="search" placeholder="Search {{$name}}s..." type="text" name="" id="">
                 </div>
-                
+
                 <button type="button" class="-ml-px relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
                     <span class="sr-only">search</span>
 
@@ -23,7 +23,7 @@
                 </button>
             </span>
         </div>
-     
+
 
         <ul role="list" class="divide-y divide-gray-200 overflow-scroll h-[400px]">
             @foreach ($users as $option)
@@ -50,7 +50,7 @@
                                     </svg>
 
                                 </button>
-                                <button type="button" class="-ml-px relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                                <button x-data="{}" x-on:click="showEditModal({{$option->id}},'{{$name}}')" type="button" class="-ml-px relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
                                     <span class="sr-only">update</span>
 
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -58,6 +58,8 @@
                                     </svg>
 
                                 </button>
+
+
                             </span>
 
                         </div>
