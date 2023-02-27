@@ -38,7 +38,8 @@ Route::post('/admin/song/save', [SongController::class, 'save'])->name('admin.so
 Route::get('/user', [DashboardController::class, 'user'])->name('user');
 
 Route::get('/admin/update/artist/{id}', [ArtistController::class, 'update'])->name('admin.update.artist');
-Route::post('/admin/edit/artist/{id}', [ArtistController::class, 'edit'])->name('admin.edit.artist');
+Route::post('/admin/edit/artist/{id}', [ArtistController::class, 'edit'])->name('save.new.artist');
+Route::get('/admin/delete/artist/{id}', [ArtistController::class, 'delete'])->name('delete.artist');
 /* Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
