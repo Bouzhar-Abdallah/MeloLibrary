@@ -33,12 +33,16 @@ class SongController extends Controller
             ['songs' => $songs]
         );
     }
+
+    public function update($id){
+        
+        dd($id);
+    }
     public function save(Request $request)
     {
         $file = $request->file('cover');
         $uploadResult =  Cloudinary::UploadApi()->upload($file->getPathname());
         $imageUrl = $uploadResult['secure_url'];
-
 
 
         $clip = $request->file('clip');

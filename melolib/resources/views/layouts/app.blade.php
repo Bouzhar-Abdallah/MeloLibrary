@@ -25,13 +25,13 @@
                 </div>
             </header>
             @endif
+            <x-admin_dashboard_nav />
             
-            <livewire:edit-modal />
             
-            
-                {{ $slot }}
+            {{ $slot }}
             
         </div>
     </body>
     @livewireScripts
+    <livewire:edit-modal />
 </html>

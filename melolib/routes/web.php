@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
@@ -36,6 +37,8 @@ Route::get('/admin/song/new', [SongController::class, 'index'])->name('admin.son
 Route::post('/admin/song/save', [SongController::class, 'save'])->name('admin.song.save');
 Route::get('/user', [DashboardController::class, 'user'])->name('user');
 
+Route::get('/admin/update/artist/{id}', [ArtistController::class, 'update'])->name('admin.update.artist');
+Route::post('/admin/edit/artist/{id}', [ArtistController::class, 'edit'])->name('admin.edit.artist');
 /* Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
