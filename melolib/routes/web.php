@@ -5,7 +5,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\BandController;
 use App\Http\Controllers\FileUploadController;
+
 
 //use App\Http\Middleware\UserMiddleware;
 /*
@@ -40,6 +42,10 @@ Route::get('/user', [DashboardController::class, 'user'])->name('user');
 Route::get('/admin/update/artist/{id}', [ArtistController::class, 'update'])->name('admin.update.artist');
 Route::post('/admin/edit/artist/{id}', [ArtistController::class, 'edit'])->name('save.new.artist');
 Route::get('/admin/delete/artist/{id}', [ArtistController::class, 'delete'])->name('delete.artist');
+
+Route::get('/admin/update/band/{id}', [BandController::class, 'update'])->name('admin.update.band');
+Route::post('/admin/edit/band/{id}', [BandController::class, 'edit'])->name('save.new.band');
+Route::get('/admin/delete/band/{id}', [BandController::class, 'delete'])->name('delete.band');
 /* Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

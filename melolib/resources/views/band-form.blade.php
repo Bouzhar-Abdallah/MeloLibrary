@@ -17,7 +17,7 @@
 <x-app-layout>
   
   <!-- Email Address -->
-  <form class="w-1/2 mx-auto" action="{{ route('save.new.artist', ['id' => $artist->id]) }}" method="post" enctype="multipart/form-data">
+  <form class="w-1/2 mx-auto" action="{{ route('save.new.band', ['id' => $artist->id]) }}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="mt-4">
       <x-input-label for="name" :value="__('name')" />
@@ -31,9 +31,9 @@
       <x-input-error :messages="$errors->get('country')" class="mt-2" />
     </div>
     <div class="mt-4">
-      <x-input-label for="date_of_birth" :value="__('date_of_birth')" />
-      <x-text-input id="date_of_birth" class="block mt-1 w-full" type="date" name="date_of_birth" :value="$artist->date_of_birth" required autocomplete="username" />
-      <x-input-error :messages="$errors->get('date_of_birth')" class="mt-2" />
+      <x-input-label for="date_creation" :value="__('date_creation')" />
+      <x-text-input id="date_creation" class="block mt-1 w-full" type="date" name="date_creation" :value="$artist->date_creation" required autocomplete="username" />
+      <x-input-error :messages="$errors->get('date_creation')" class="mt-2" />
     </div>
     <div class="mt-4 flex gap-5">
       <div class="h-12 w-12 ">

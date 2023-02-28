@@ -42,7 +42,7 @@
                         <div class="inline-flex rounded-md shadow-sm" role="group">
 
                             <span class="relative z-0 inline-flex shadow-sm rounded-md">
-                                <a href="{{ route('delete.artist', ['id' => $option->id]) }}" type="button" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                                <a href="/admin/delete/{{$name}}/{{$option->id}}" type="button" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
                                     <span class="sr-only">delete</span>
 
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
