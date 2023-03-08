@@ -50,6 +50,7 @@ class SongController extends Controller
             "resource_type" => "auto",
         ]);
         $clipUrl = $uploadClipResult['secure_url'];
+        
         $audio = new \wapmorgan\Mp3Info\Mp3Info($clip, true);
         
 

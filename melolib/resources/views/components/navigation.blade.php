@@ -19,7 +19,7 @@
                         <a href="profile" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-m-black md:dark:hover:text-m-gray dark:hover:bg-gray-700 dark:hover:text-m-gray md:dark:hover:bg-transparent">Profile</a>
                     </li>
                     <li>
-                        <a href="dashboard" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-m-black md:dark:hover:text-m-gray dark:hover:bg-gray-700 dark:hover:text-m-gray md:dark:hover:bg-transparent">dashboard</a>
+                        <a href="/dashboard" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-m-black md:dark:hover:text-m-gray dark:hover:bg-gray-700 dark:hover:text-m-gray md:dark:hover:bg-transparent">dashboard</a>
                     </li>
                     
                     @if (Route::has('login'))
