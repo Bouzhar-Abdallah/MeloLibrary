@@ -20,7 +20,7 @@
 
         <x-stats />
         <!-- lists -->
-        <button onclick="Livewire.emit('openModal', 'hello-world')">Open Modal</button>
+        <button onclick="Livewire.emit('openModal', 'feedback-modal')">Open Modal</button>
         <dl class="mt-5 border border-gray-300 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 lg:grid-cols-3 md:grid-cols-2 md:divide-y-0 md:divide-x">
           <livewire:search name="artist" />
           <livewire:search name="band" />
