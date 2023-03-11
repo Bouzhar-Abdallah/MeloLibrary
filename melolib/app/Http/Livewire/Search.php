@@ -14,6 +14,8 @@ class Search extends Component
     public $search = '';
     public $options;
     public $count;
+
+    public $listeners = ['itemUpdated' => 'render'];
     public function mount($name)
     {
         $this->name = $name;

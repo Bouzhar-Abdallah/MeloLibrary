@@ -62,8 +62,9 @@ class EditArtistModal extends ModalComponent
         
         
         $this->closeModalWithEvents([
-            FeedbackModal::getName() => ['formModalEvent', ['success']],
-            
+            /* FeedbackModal::getName() => ['formModalEvent', ['success']], */
+            FeedbackModal::getName() => 'itemUpdated',
+            Search::getName()=> 'itemUpdated',
         ]);
         //$this->closeModalWithEvents();
 
